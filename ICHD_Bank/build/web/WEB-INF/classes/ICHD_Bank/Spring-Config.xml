@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+" xmlns:aop="http://www.springframework.org/schema/aop">
+
+    <bean id="CustomerBean" class = "ICHD_Bank.Customer">
+        <property name="AccountName" value="VP16122000" />
+        <property name="FirstName" value="Guru" />
+        <property name="MiddleName" value="Gulab" />
+        <property name="LastName" value="Khatri" />
+        <property name="DateOfBirth" value="16" />
+        <property name="MonthOfBirth" value="December" />
+        <property name="YearOfBirth" value="2000" />
+        <property name="FatherName" value="Vinod Seth Ji" />
+        <property name="EmailID" value="abcd@niit.com" />
+        <property name="Gender" value="Female" />
+        <property name="MaritalStatus" value="Unmarried" />
+        <property name="HouseNo" value="31" />
+        <property name="StreetName" value="St No-3, H-Block" />
+        <property name="State" value="New Delhi" />
+        <property name="City" value="Delhi" />
+        <property name="PinCode" value="110092" />
+        <property name="Phone" value="7291967064" />
+        <property name="UserName" value="s190020100269" />
+        <property name="Password" value="MR@access#123" />
+    </bean>
+
+    <bean id="AccountBean" class="ICHD_Bank.Account">
+        <constructor-arg value="ICHD00010001" />
+        <constructor-arg value="05/01/2020" />
+        <constructor-arg value="5000" />
+        <constructor-arg value="Savings" />
+    </bean>
+    
+    <bean id="FundTransferTransactionBean" class="ICHD_Bank.FundTransfer">
+        <constructor-arg value="10000" />
+        <property name="TransactionPassword" value="1234567890" />
+        <property name="ToAccount" value="ICHD00010002"/>
+    </bean>
+    
+    <bean id="TransferProxy" class="org.springframwork.aop.framework.ProxyFactoryBean">
+        <property name="Target" ref="Inst" />
+        <property name="InterceptorNames" value="FundTransferAdvisor" />
+        <property name="ProxyInterfaces" value="TransferFund.FundTransferApp" />
+    </bean>
+
+    <bean id="Inst" class="TransferFund.FundTransferImpl" />
+    
+    <bean id="FundTransferAdvisor" class="org.springframwork.aop.support.DefaultPointCutAdvisor">
+        <property name="Advice" ref="FundTransferAdvice" />
+        <property name="Pointcut" value="BookingPointCut" />
+    </bean>
+
+    <bean id="FundTransferAdvice" class="TransferFund.FundTransferAdvice">
+        <property name="ValidateFundTransfer" ref="Audience" />
+    </bean>
+
+    <bean id="Audience" class="TransferFund.ValidatingFundTransfer" />
+    <bean id="BookingPointCut" class="org.springframwork.aop.support.JdkRegexpMethodPointcut">
+        <property name="pattern" value=".*TransferAmount" />
+    </bean>
+    
+</beans>

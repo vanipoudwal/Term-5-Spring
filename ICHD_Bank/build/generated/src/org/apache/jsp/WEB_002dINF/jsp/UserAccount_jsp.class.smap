@@ -1,0 +1,24 @@
+SMAP
+UserAccount_jsp.java
+JSP
+*S JSP
+*F
++ 0 UserAccount.jsp
+WEB-INF/jsp/UserAccount.jsp
++ 1 menu.jsp
+WEB-INF/jsp/menu.jsp
++ 2 footer.jsp
+WEB-INF/jsp/footer.jsp
+*L
+5,18:50
+5#1,38:68
+22#0,26:105
+48:131,3
+49,7:134
+56:141,3
+57,7:144
+64:151,3
+65,11:154
+5#2,24:165
+75#0,4:188
+*E

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+">
+
+    <bean id = "Product1" class = "com.spring.bean.Product">
+        <property name = "ProductID" value = "A001001" />
+        <property name = "ProductName" value = "Ferrero Nutella" />
+        <property name = "ProductQty" value = "4" />
+        <property name = "ProductPrice" value = "2000" />
+    </bean>
+    <bean id = "Product2" class = "com.spring.bean.Product">
+        <property name = "ProductID" value = "B002002" />
+        <property name = "ProductName" value = "Ferrero Rochher" />
+        <property name = "ProductQty" value = "2" />
+        <property name = "ProductPrice" value = "1050" />
+    </bean>
+    <bean id = "Product3" class = "com.spring.bean.Product">
+        <property name = "ProductID" value = "C003003" />
+        <property name = "ProductName" value = "Sundrop Peanut Butter" />
+        <property name = "ProductQty" value = "2" />
+        <property name = "ProductPrice" value = "850" />
+    </bean>
+    <bean id = "Product4" class = "com.spring.bean.Product">
+        <property name = "ProductID" value = "D004004" />
+        <property name = "ProductName" value = "Chicken Nuggets" />
+        <property name = "ProductQty" value = "5" />
+        <property name = "ProductPrice" value = "3500" />
+    </bean>
+    <bean id = "Product5" class = "com.spring.bean.Product">
+        <property name = "ProductID" value = "E005005" />
+        <property name = "ProductName" value = "Lays Chips" />
+        <property name = "ProductQty" value = "50" />
+        <property name = "ProductPrice" value = "1000" />
+    </bean>
+    
+    <bean id = "Customer1" class = "com.spring.bean.Customer">
+        <property name = "CustomerID" value = "A001001" />
+        <property name = "CustomerName" value = "Vani Poudwal" />
+        <property name = "CustomerAddress" value = "VP-16/12, Panchsheel Park" />
+    </bean>
+    <bean id = "Customer2" class = "com.spring.bean.Customer">
+        <property name = "CustomerID" value = "B002002" />
+        <property name = "CustomerName" value = "Guddu Rangeela" />
+        <property name = "CustomerAddress" value = "RB-24/02, Friends Colony" />
+    </bean>
+    <bean id = "Customer3" class = "com.spring.bean.Customer">
+        <property name = "CustomerID" value = "C003003" />
+        <property name = "CustomerName" value = "Guru Gulab Khatri" />
+        <property name = "CustomerAddress" value = "Sector-18, Noida" />
+    </bean>
+    <bean id = "Customer4" class = "com.spring.bean.Customer">
+        <property name = "CustomerID" value = "D004004" />
+        <property name = "CustomerName" value = "Priyanka Joshi" />
+        <property name = "CustomerAddress" value = "PJ-03/01, Punjabi Bagh" />
+    </bean>
+    <bean id = "Customer5" class = "com.spring.bean.Customer">
+        <property name = "CustomerID" value = "E005005" />
+        <property name = "CustomerName" value = "Yash Upreti" />
+        <property name = "CustomerAddress" value = "YU-09/12, Greater Kailash" />
+    </bean>
+    
+</beans>

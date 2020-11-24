@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+">
+
+    <bean id = "Employee1" class = "com.emporg.bean.Employee">
+        <property name = "EmpID" value = "EMP001" />
+        <property name = "EmpName" value = "Mr. Khurana" />
+        <property name = "EmpAge" value = "29" />
+        <property name = "EmpAddress" value = "Delhi" />
+        <property name = "EmpQualification" value = "MTech" />
+    </bean>
+    <bean id = "Employee2" class = "com.emporg.bean.Employee">
+        <property name = "EmpID" value = "EMP002" />
+        <property name = "EmpName" value = "Ms. Oberoi" />
+        <property name = "EmpAge" value = "26" />
+        <property name = "EmpAddress" value = "Banglore" />
+        <property name = "EmpQualification" value = "MCA" />
+    </bean>
+    <bean id = "Employee3" class = "com.emporg.bean.Employee">
+        <property name = "EmpID" value = "EMP003" />
+        <property name = "EmpName" value = "Mr. Singhaniya" />
+        <property name = "EmpAge" value = "25" />
+        <property name = "EmpAddress" value = "Mumbai" />
+        <property name = "EmpQualification" value = "CA" />
+    </bean>
+    <bean id = "Employee4" class = "com.emporg.bean.Employee">
+        <property name = "EmpID" value = "EMP004" />
+        <property name = "EmpName" value = "Ms. Khanna" />
+        <property name = "EmpAge" value = "24" />
+        <property name = "EmpAddress" value = "Haryana" />
+        <property name = "EmpQualification" value = "Interior Designing" />
+    </bean>
+    <bean id = "Employee5" class = "com.emporg.bean.Employee">
+        <property name = "EmpID" value = "EMP005" />
+        <property name = "EmpName" value = "Mr. Patel" />
+        <property name = "EmpAge" value = "27" />
+        <property name = "EmpAddress" value = "Chennai" />
+        <property name = "EmpQualification" value = "MBA" />
+    </bean>
+    <bean id = "Employee6" class = "com.emporg.bean.Employee">
+        <property name = "EmpID" value = "EMP006" />
+        <property name = "EmpName" value = "Ms. Bhatia" />
+        <property name = "EmpAge" value = "28" />
+        <property name = "EmpAddress" value = "Punjab" />
+        <property name = "EmpQualification" value = "MCom" />
+    </bean>
+    
+</beans>
