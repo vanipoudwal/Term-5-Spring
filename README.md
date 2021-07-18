@@ -1,2 +1,2 @@
 # Term-5-Spring
-This repository is used to write SPRING Code.
+This Repository Is Used To Write Spring Framework Code.
